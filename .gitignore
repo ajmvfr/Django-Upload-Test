@@ -1,4 +1,4 @@
 __pycache__
 venv/
 .env
-djangouploads/files/covers/*
+djangouploads/files/covers/*.jpg
