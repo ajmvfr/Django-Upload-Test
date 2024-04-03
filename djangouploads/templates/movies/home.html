@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Movies</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Image</th>
+        </tr>
+        {% for movie in movies %}
+        <tr>
+            <td><a href="{% url 'movie' movie.id %}">{{movie.id}}</a></td> 
+            <td><a href="{% url 'movie' movie.id %}">{{movie.name}}</a></td> 
+            <td><a href="{% url 'movie' movie.id %}"><img style="max-width: 100px;" src={{movie.image.url}} /></a></td>
+        </tr>
+        {% endfor %}        
+    </table>
+
+    <a href="{% url 'upload' %}">Add New Movie</a> 
+
+</body>
+</html>
